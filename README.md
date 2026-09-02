@@ -2,6 +2,22 @@
 
 Documentation for the CSDMS grpc4bmi project.
 
+## Build
+
+Set up a virtual environment and install the requirements:
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+Build the documentation:
+
+```bash
+make -C docs html
+```
+
 ## Acknowledgments
 
 <!-- start-ack -->
