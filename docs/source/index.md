@@ -3,6 +3,8 @@
 # Coupling Containerized Models with grpc4bmi
 
 ```{toctree}
+:caption: Project Description
+:hidden: true
 :maxdepth: 2
 
 bmi
@@ -11,32 +13,21 @@ servers-bmi-examples
 servers-models
 ```
 
-<!--
-### Changelog
-
-```{toctree}
-:maxdepth: 2
-
-CHANGES
-```
-
--->
-
-## Project documents
-
-```{toctree}
-:maxdepth: 2
-
-license
-code-of-conduct
-contributing
-credits
-support
-```
-
 ## Acknowledgments
 
 ```{include} ../../README.md
 :start-after: "<!-- start-ack -->"
 :end-before: "<!-- end-ack -->"
+```
+
+```{toctree}
+:caption: Development
+:hidden: true
+:maxdepth: 2
+
+License <license>
+Code of Conduct <code-of-conduct>
+Contributors <contributing>
+Credits <credits>
+Getting Help <support>
 ```
