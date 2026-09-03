@@ -1,6 +1,6 @@
 <!-- grpc4bmi-project -->
 
-# Coupling Containerized Models with grpc4bmi
+# Coupling containerized models with grpc4bmi
 
 ```{toctree}
 :caption: Project Description
@@ -9,8 +9,7 @@
 
 bmi
 grpc4bmi
-servers-bmi-examples
-servers-models
+servers/index
 ```
 
 ## Acknowledgments
