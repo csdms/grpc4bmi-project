@@ -2,6 +2,9 @@
 
 # Coupling containerized models with grpc4bmi
 
+```{include} introduction.md
+```
+
 ```{toctree}
 :caption: Project Description
 :hidden: true
