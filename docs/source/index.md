@@ -20,22 +20,19 @@ servers-models
 CHANGES
 ```
 
-### Project documents
+-->
+
+## Project documents
 
 ```{toctree}
 :maxdepth: 2
 
-LICENSE
-CODE-OF-CONDUCT
-CONTRIBUTING
+license
+code-of-conduct
+contributing
+credits
+support
 ```
-
-## Help
-
-Depending on your need, CSDMS can provide advice or consulting services.
-Feel free to contact us through the [CSDMS Help Desk](https://github.com/csdms/help-desk).
-
--->
 
 ## Acknowledgments
 
