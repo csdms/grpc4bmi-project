@@ -15,13 +15,6 @@ grpc4bmi
 servers/index
 ```
 
-## Acknowledgments
-
-```{include} ../../README.md
-:start-after: "<!-- start-ack -->"
-:end-before: "<!-- end-ack -->"
-```
-
 ```{toctree}
 :caption: Development
 :hidden: true
