@@ -10,13 +10,12 @@
 :hidden: true
 :maxdepth: 2
 
-bmi
-grpc4bmi
+Base Images <base-images>
 servers/index
 ```
 
 ```{toctree}
-:caption: Development
+:caption: Project Resources
 :hidden: true
 :maxdepth: 2
 
