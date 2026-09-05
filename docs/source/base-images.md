@@ -38,6 +38,13 @@ The base environment is activated.
 The source code used to build this image, as well as simple examples of its use, can be found on GitHub at [csdms/bmi-docker][bmi-image-source].
 A versioned, multiplatform image built from this repository is hosted on Docker Hub at [csdms/bmi][bmi-image-image].
 
+:::{admonition} BMI base image
+:class: seealso
+
+* Source repository: <https://github.com/csdms/bmi-docker>
+* Image repository: <https://hub.docker.com/r/csdms/bmi>
+:::
+
 ## grpc4bmi base image
 
 The grpc4bmi base image is built on the BMI base image, so it contains everything described in the section above.
@@ -46,6 +53,13 @@ Dependencies for the server are met with gRPC conda packages available from the 
 
 The source code used to build this image can be found on GitHub at [csdms/grpc4bmi-docker][grpc4bmi-image-source].
 A versioned, multiplatform image built from this repository is hosted on Docker Hub at [csdms/grpc4bmi][grpc4bmi-image-image].
+
+:::{admonition} grpc4bmi base image
+:class: seealso
+
+* Source repository: <https://github.com/csdms/grpc4bmi-docker>
+* Image repository: <https://hub.docker.com/r/csdms/grpc4bmi>
+:::
 
 <!-- Links -->
 
