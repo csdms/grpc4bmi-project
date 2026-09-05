@@ -2,7 +2,13 @@
 
 grpc4bmi servers for BMI example models.
 
-Include an inheritance diagram.
+```{figure} ../_static/grpc4bmi-project-bmi-example-images.png
+:alt: BMI example Docker images
+:name: bmi-example-images
+
+*Figure 2: Inheritance diagram for the BMI example model grpc4bmi server images.*
+```
+
 
 ## C example
 
