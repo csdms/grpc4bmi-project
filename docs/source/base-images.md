@@ -12,6 +12,7 @@ Both are built on recent conda-forge and Ubuntu base images.
 : Inheritance diagram for the BMI and grpc4bmi base images.
 ```
 
+(bmi-base-image)=
 ## BMI base image
 
 The BMI base image contains built versions of the BMI mappings and example models for C, C++, Fortran, and Python.
@@ -20,6 +21,7 @@ This image is the base for building models that expose a BMI in these languages,
 ```{table} : Repositories contained in the BMI base image.
 :widths: auto
 :width: 75%
+:name: mappings-and-examples
 
 | Language | Mapping       | Example implementation |
 | -------- | ------------- | ---------------------- |
