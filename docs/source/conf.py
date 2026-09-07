@@ -1,7 +1,6 @@
 # grpc4bmi-project
 import datetime
 
-
 project = "grpc4bmi-project"
 author = "Community Surface Dynamics Modeling System"
 this_year = datetime.date.today().year
@@ -13,6 +12,12 @@ extensions = [
 ]
 
 myst_enable_extensions = ["colon_fence"]
+
+numfig = True
+numfig_format = {
+    "figure": "Figure %s",
+    "table": "Table %s",
+}
 
 templates_path = ["_templates"]
 exclude_patterns = []

@@ -9,7 +9,7 @@ Both are built on recent conda-forge and Ubuntu base images.
 :alt: Base Docker images
 :name: base-images
 
-*Figure 1: Inheritance diagram for the BMI and grpc4bmi base images.*
+: Inheritance diagram for the BMI and grpc4bmi base images.
 ```
 
 ## BMI base image
@@ -17,7 +17,7 @@ Both are built on recent conda-forge and Ubuntu base images.
 The BMI base image contains built versions of the BMI mappings and example models for C, C++, Fortran, and Python.
 This image is the base for building models that expose a BMI in these languages, or for inter-language model coupling.
 
-```{table} *Table 1: Repositories contained in the BMI base image.*
+```{table} : Repositories contained in the BMI base image.
 :widths: auto
 :width: 75%
 
