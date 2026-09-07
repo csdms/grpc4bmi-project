@@ -11,7 +11,7 @@
 :maxdepth: 2
 
 Base Images <base-images>
-servers/index
+implementation/index
 ```
 
 ```{toctree}
