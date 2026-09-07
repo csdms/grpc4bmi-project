@@ -23,5 +23,10 @@ templates_path = ["_templates"]
 exclude_patterns = []
 
 html_theme = "furo"
-html_title = "CSDMS grpc4bmi project"
+html_title = "" # "CSDMS grpc4bmi project"
 html_static_path = ["_static"]
+html_logo = "_static/CSDMS-logo-color-notagline-ver.png"
+html_favicon = "_static/logo-32x32.png"
+html_theme_options = {
+    "sidebar_hide_name": True,
+}
