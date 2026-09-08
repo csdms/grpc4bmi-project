@@ -2,9 +2,6 @@
 
 # Coupling containerized models with grpc4bmi
 
-```{include} introduction.md
-```
-
 ```{toctree}
 :caption: Project Description
 :hidden: true
@@ -24,4 +21,14 @@ Code of Conduct <code-of-conduct>
 Contributors <contributing>
 Credits <credits>
 Getting Help <support>
+```
+
+```{include} introduction.md
+```
+
+## Acknowledgments
+
+```{include} ../../README.md
+:start-after: "<!-- start-ack -->"
+:end-before: "<!-- end-ack -->"
 ```
