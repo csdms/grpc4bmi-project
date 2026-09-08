@@ -1,10 +1,10 @@
 # Implementation
 
-grpc4bmi uses a client-server execution model, as depicted in {numref}`grpc4bmi-model`.
+grpc4bmi uses a client-server execution model, as depicted in {numref}`figure:grpc4bmi-model`.
 
 :::{figure} ../_static/grpc4bmi-project-grpc4bmi-model.png
 :alt: grpc4bmi client-server model
-:name: grpc4bmi-model
+:name: figure:grpc4bmi-model
 
 : A diagram of the grpc4bmi client-server model.
 :::

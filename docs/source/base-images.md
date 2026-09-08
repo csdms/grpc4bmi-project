@@ -1,5 +1,6 @@
 <!--base-images-->
 
+(base-images)=
 # Base images
 
 Two Docker images, one for the BMI mappings and examples, the other for the grpc4bmi C++ server, are used as base images in this project.
@@ -7,7 +8,7 @@ Both are built on recent conda-forge and Ubuntu base images.
 
 ```{figure} _static/grpc4bmi-project-base-images-h.png
 :alt: Base Docker images
-:name: base-images
+:name: figure:base-images
 
 : Inheritance diagram for the BMI and grpc4bmi base images.
 ```
@@ -21,7 +22,7 @@ This image is the base for building models that expose a BMI in these languages,
 ```{table} : Repositories contained in the BMI base image.
 :widths: auto
 :width: 75%
-:name: mappings-and-examples
+:name: table:mappings-and-examples
 
 | Language | Mapping       | Example implementation |
 | -------- | ------------- | ---------------------- |
@@ -47,6 +48,7 @@ A versioned, multiplatform image built from this repository is hosted on Docker 
 * Image repository: <https://hub.docker.com/r/csdms/bmi>
 :::
 
+(grpc4bmi-base-image)=
 ## grpc4bmi base image
 
 The grpc4bmi base image is built on the BMI base image, so it contains everything described in the section above.
