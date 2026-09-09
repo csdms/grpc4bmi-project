@@ -9,6 +9,7 @@ release = "0.1"
 
 extensions = [
     "myst_parser",
+    "sphinx_copybutton",
 ]
 
 myst_enable_extensions = ["colon_fence"]
