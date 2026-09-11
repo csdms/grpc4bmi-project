@@ -77,10 +77,51 @@ For more in-depth examples of running the *Heat* model through grpc4bmi, includi
 
 ## C++ example
 
+From the root directory of the [source repository][example-cxx-server-source], the file structure of the grpc4bmi server for the C++ *Heat* model is:
+
+```sh
+images/conda-base
+├── Dockerfile
+├── README.md
+└── server
+    ├── CMakeLists.txt
+    └── heatcxx-grpc4bmi-server.cxx
+```
+
+The server source, `heatcxx-grpc4bmi-server.cxx`, includes:
+
+1. the *Heat* model header, `bmi_heat.hxx`,
+and the grpc4bmi server header, `bmi_grpc_server.h`
+1. a main program that instantiates the model's BMI and calls the grpc4bmi *run_bmi_server* function, passing in the model's BMI instance
+
+The build system is CMake.
+In Docker, the server is compiled into the executable *heatcxx-grpc4bmi-server* and installed alongside the existing *Heat* model into `CONDA_DIR=/opt/conda`.
+The server executable is the entry point into the container, exposed through port `55555`.
+
+On the host machine, Docker and the grpc4bmi client must be installed.
+
+To use the client, import the `BmiClientDocker` class into a Python session and use it to create an instance of the model, as shown in the simple example below.
+
+```python
+from grpc4bmi.bmi_client_docker import BmiClientDocker
+
+
+m = BmiClientDocker(image="csdms/bmi-example-cxx-grpc4bmi", image_port=55555, work_dir=".")
+m.get_component_name()
+
+del m  # stop the container cleanly
+```
+
+Note that the *image* parameter refers to a built version of the image; using `"csdms/bmi-example-cxx-grpc4bmi"` pulls the [latest version of the image][example-cxx-server-image] from Docker Hub. 
+
+All BMI methods can now be called to query and run the model.
+
+For more in-depth examples of running the *Heat* model through grpc4bmi, including a Python script and a Jupyter notebook, see the [examples][example-cxx-examples] directory of the source repository.
+
 :::{admonition} BMI C++ example grpc4bmi server image
 :class: seealso
 
-* Source repository: <https://github.com/csdms/bmi-example-cxx-grpc4bmi>
+* Source repository: <https://github.com/csdms/bmi-example-cxx-grpc4bmi> (includes build instructions)
 * Image repository: <https://hub.docker.com/r/csdms/bmi-example-cxx-grpc4bmi>
 :::
 
@@ -112,3 +153,6 @@ This example is still under development.
 [example-c-server-source]: https://github.com/csdms/bmi-example-c-grpc4bmi
 [example-c-server-image]: https://hub.docker.com/r/csdms/bmi-example-c-grpc4bmi
 [example-c-examples]: https://github.com/csdms/bmi-example-c-grpc4bmi/blob/main/examples/README.md
+[example-cxx-server-source]: https://github.com/csdms/bmi-example-cxx-grpc4bmi
+[example-cxx-server-image]: https://hub.docker.com/r/csdms/bmi-example-cxx-grpc4bmi
+[example-cxx-examples]: https://github.com/csdms/bmi-example-cxx-grpc4bmi/blob/main/examples/README.md
