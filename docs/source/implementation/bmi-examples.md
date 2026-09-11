@@ -12,6 +12,13 @@ Below, we describe writing grpc4bmi servers for these example models and using t
 : Inheritance diagram for the BMI example model grpc4bmi server images.
 ```
 
+:::{note}
+
+In the examples below, the source repository contains two options for building a grpc4bmi server: one titled *conda-base*, the other *source-base*.
+Here, we'll use the *conda-base* option.
+It uses the grpc4bmi base image described in the {ref}`base-images` section, where conda-forge is used to satisfy all dependencies.
+The *source-base* option is an alternative where all grpc4bmi dependencies are built from source, which can be tricky.
+:::
 
 ## C example
 
