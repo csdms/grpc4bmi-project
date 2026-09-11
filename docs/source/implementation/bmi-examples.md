@@ -48,10 +48,30 @@ The build system is CMake.
 In Docker, the server is compiled into the executable *heatc-grpc4bmi-server* and installed alongside the existing *Heat* model into `CONDA_DIR=/opt/conda`.
 The server executable is the entry point into the container, exposed through port `55555`.
 
+On the host machine, Docker and the grpc4bmi client must be installed.
+
+To use the client, import the `BmiClientDocker` class into a Python session and use it to create an instance of the model, as shown in the simple example below.
+
+```python
+from grpc4bmi.bmi_client_docker import BmiClientDocker
+
+
+m = BmiClientDocker(image="csdms/bmi-example-c-grpc4bmi", image_port=55555, work_dir=".")
+m.get_component_name()
+
+del m  # stop the container cleanly
+```
+
+Note that the *image* parameter refers to a built version of the image; using `"csdms/bmi-example-c-grpc4bmi"` pulls the [latest version of the image][example-c-server-image] from Docker Hub. 
+
+All BMI methods can now be called to query and run the model.
+
+For more in-depth examples of running the *Heat* model through grpc4bmi, including a Python script and a Jupyter notebook, see the [examples][example-c-examples] directory of the source repository.
+
 :::{admonition} BMI C example grpc4bmi server image
 :class: seealso
 
-* Source repository: <https://github.com/csdms/bmi-example-c-grpc4bmi>
+* Source repository: <https://github.com/csdms/bmi-example-c-grpc4bmi> (includes build instructions)
 * Image repository: <https://hub.docker.com/r/csdms/bmi-example-c-grpc4bmi>
 :::
 
@@ -91,3 +111,4 @@ This example is still under development.
 
 [example-c-server-source]: https://github.com/csdms/bmi-example-c-grpc4bmi
 [example-c-server-image]: https://hub.docker.com/r/csdms/bmi-example-c-grpc4bmi
+[example-c-examples]: https://github.com/csdms/bmi-example-c-grpc4bmi/blob/main/examples/README.md
