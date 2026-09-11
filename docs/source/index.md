@@ -28,12 +28,12 @@ Getting Help <support>
 
 ## Overview
 
-In this project, we used Docker to containerize several models from the [CSDMS Model Repository][model-repo].
+In this project, we use Docker to containerize several models from the [CSDMS Model Repository][model-repo].
 The models are written in C, C++, Fortran, and Python.
 Images of the models are hosted and made publicly available on [Docker Hub][csdms-docker].
 Each model has a [Basic Model Interface][bmi] (BMI), allowing it to be controlled with a set of common functions.
 
-To facilitate model coupling, we used [grpc4bmi][grpc4bmi], software developed by the Netherlands eScience Center that allows communication with BMI functions in a container through the [Google Remote Procedure Call][grpc] (gRPC) framework.
+To facilitate model coupling, we used [grpc4bmi][grpc4bmi], software developed by the Netherlands eScience Center, which allows communication with BMI functions in a container through the [Google Remote Procedure Call][grpc] (gRPC) framework.
 The BMI functions for each model are exposed as endpoints in a container by a grpc4bmi server.
 A grpc4bmi client, written in Python, can then make calls to the containerized BMI functions.
 
@@ -44,7 +44,7 @@ A grpc4bmi client, written in Python, can then make calls to the containerized B
 * Building grpc4bmi servers for
   * the BMI exampls models
   * models from the CSDMS Model Repository
-* Running models with the grpc4bmi client
+* Running models with the grpc4bmi Python client
 
 ## Acknowledgments
 
