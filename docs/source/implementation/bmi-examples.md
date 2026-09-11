@@ -1,9 +1,12 @@
 # BMI example models
 
 CSDMS maintains a set of example models (nominally of temperature diffusion; each is named *Heat*), listed in {numref}`table:mappings-and-examples`, that are written in C, C++, Fortran, and Python and wrapped with a Basic Model Interface (BMI).
-They are included in the {ref}`bmi-base-image`.
+They are included in the {ref}`bmi-base-image`,
+which is the base for the {ref}`grpc4bmi-base-image`,
+which, as shown in {numref}`figure:bmi-example-images`,
+is the base for the grpc4bmi servers for these examples.
 
-Below, we describe writing grpc4bmi servers for these example models and using the grpc4bmi Python client to run them.
+Below, we describe writing the grpc4bmi servers for these models and running them through the grpc4bmi Python client.
 
 ```{figure} ../_static/grpc4bmi-project-bmi-example-images.png
 :alt: BMI example Docker images
