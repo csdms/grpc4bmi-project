@@ -25,6 +25,29 @@ The *source-base* option is an alternative where all grpc4bmi dependencies are b
 
 ## C example
 
+From the root directory of the [source repository][example-c-server-source], the file structure of the grpc4bmi server for the C *Heat* model is:
+
+```sh
+images/conda-base
+├── Dockerfile
+├── README.md
+└── server
+    ├── CMakeLists.txt
+    └── heatc-grpc4bmi-server.cxx
+```
+
+Note that the server is actually a C++ project to match the grpc4bmi software and its dependencies.
+
+The server source, `heatc-grpc4bmi-server.cxx`, includes:
+
+1. the *Heat* model header, `bmi_heat.h`,
+and the grpc4bmi server header, `bmi_grpc_server.h`
+1. a main program that instantiates the model's BMI and calls the grpc4bmi *run_bmi_server* function, passing in the model's BMI instance
+
+The build system is CMake.
+In Docker, the server is compiled into the executable *heatc-grpc4bmi-server* and installed alongside the existing *Heat* model into `CONDA_DIR=/opt/conda`.
+The server executable is the entry point into the container, exposed through port `55555`.
+
 :::{admonition} BMI C example grpc4bmi server image
 :class: seealso
 
@@ -62,3 +85,9 @@ This example is still under development.
 * Source repository: <https://github.com/csdms/bmi-example-python-grpc4bmi>
 * Image repository: <https://hub.docker.com/r/csdms/bmi-example-python-grpc4bmi>
 :::
+
+
+<!-- Links -->
+
+[example-c-server-source]: https://github.com/csdms/bmi-example-c-grpc4bmi
+[example-c-server-image]: https://hub.docker.com/r/csdms/bmi-example-c-grpc4bmi
